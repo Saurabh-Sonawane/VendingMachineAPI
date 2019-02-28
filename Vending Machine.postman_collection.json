@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Vending Machine",
+		"_postman_id": "9ca7d160-27d0-67c2-6856-bcba4381ddb5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Init Machine",
+			"request": {
+				"url": "localhost:8080/vending-api/admin/init-machine",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"ONE_PENNY\",\r\n    \t\"initialCount\"\t:\t100\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"TWO_PENCE\",\r\n    \t\"initialCount\"\t:\t200\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"FIVE_PENCE\",\r\n    \t\"initialCount\"\t:\t300\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"TEN_PENCE\",\r\n    \t\"initialCount\"\t:\t400\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"TWENTY_PENCE\",\r\n    \t\"initialCount\"\t:\t500\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"FIFTY_PENCE\",\r\n    \t\"initialCount\"\t:\t600\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"ONE_POUND\",\r\n    \t\"initialCount\"\t:\t700\r\n\t},\r\n\t{\r\n    \t\"coinName\"\t\t:\t\"TWO_POUND\",\r\n    \t\"initialCount\"\t:\t800\r\n\t}\r\n\t\r\n]\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit Coin",
+			"request": {
+				"url": "localhost:8080/vending-api/deposit/TWO_PENCE",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Change",
+			"request": {
+				"url": "localhost:8080/vending-api/return/change/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock",
+			"request": {
+				"url": "localhost:8080/vending-api/admin/current-stock",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Deposite",
+			"request": {
+				"url": "localhost:8080/vending-api/admin/all-deposit",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
